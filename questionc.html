@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" style="width: 100%;">
+
+            <img src="download (2).jpeg" width="200px" id="img" alt="" >
+
+            <br>
+
+            <button class="btn">click to move image</button>
+
+            <button  id="clear" class="refresh" onclick="Refresh()">Refresh</button>
+    </div>
+
+
+    <script>
+        let image = document.querySelector('img');
+         let button = document.querySelector('.btn');
+         
+
+         image.addEventListener('mouseover',()=>{
+            image.style.width="500px";
+
+         });
+
+         image.addEventListener('mouseleave',()=>{
+
+            image.style.width="200px";
+
+
+         })
+
+
+         button.addEventListener('click',()=>{
+
+           
+
+            
+                image.style.transform="translateX(200px)";
+
+                
+
+           
+
+
+            
+         })
+
+        //  function Refresh() {
+
+        //     let cls = document.querySelector('.refresh');
+        //     console.log("hello");
+        //     cls.addEventListener('click',()=>{
+        //         location.reload();
+        //     });
+            
+        //  }
+    </script>
+    
+</body>
+</html>

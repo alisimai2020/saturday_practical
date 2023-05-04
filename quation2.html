@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins',sans-serif;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #001e4d;
+    }
+
+    .container{
+        background: #fff;
+        width: 90%;
+        max-width: 600px;
+        margin: 100px auto 0;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    .quiz{
+        padding: 20px 0;
+    }
+
+    .quiz h2{
+        font-size: 25px;
+        color: #001e4d;
+        font-weight: 600;
+    }
+
+    p{
+        background: #fff;
+        
+        font-weight: 500;
+        border-bottom: 2px solid #7a0303;  
+        box-shadow:none;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: left;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3S;
+        width: 100%;
+    }
+    .btn:hover{
+        background: #ffffff;
+        color: #000000 ;
+    }
+    #btn {
+        background: #001e4d;
+        color: #770707;
+        font-weight: 500;
+        width: 100%;
+        border: 0;
+        padding: 10px;
+        margin: 20px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 20px;
+        
+    }
+</style>
+<body>
+
+    <div class="container">
+            <h1 style="margin-bottom: 5px;text-align: center;">ONLINE QUIZ</h1>
+
+            <hr>
+        <form action="" id="Quiz" name="Quiz">
+            
+                
+    
+                
+
+                    <p class="btn">1. What is meant By javascript ?</p>
+                    <input type="radio" id="question1" name="Question1" style="margin-bottom: 5px;" value="Javascript"> Javascript <br>
+                    <input type="radio" id="question1" name="Question1" value="Javasource"> Javasource<br><br>
+
+                    <p class="btn">2.Javascript is ______________Programming Lnaguage  ?</p>
+                    <input type="radio" id="question2" name="Question2" style="margin-bottom: 5px;" value="ServerSide"> ServerSide <br>
+                    <input type="radio" id="question2" name="Question2" value="ClientSide"> ClientSide<br><br>
+
+
+
+
+                    <button type="submit" id="submitBtn" >Submit</button>
+                
+           
+
+            
+        </form> 
+
+
+        <div id="text"></div>
+           
+    </div>
+   
+
+
+    <script>
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            console.log(fruits.includes("dapry"));
+            
+
+
+
+
+            const radioInputs = document.querySelectorAll('input[type="radio"]');
+            const submitBtn = document.getElementById('submitBtn');
+
+            var qno1 = document.querySelector('#question1').value;
+             var qno2 = document.querySelector('#question2').value;
+            submitBtn.disabled = true;
+
+            radioInputs.forEach((radioInput) => {
+
+                
+
+                    radioInput.addEventListener('change', () => {
+                        const checkedInputs = document.querySelectorAll('input[type="radio"]:checked');
+
+                        if (checkedInputs.length === 2) {
+                        submitBtn.disabled = false;
+
+                        console.log(submitBtn);
+                        }
+                        
+                        else {
+                        submitBtn.disabled = true;
+                        console.log('he');
+
+                        }
+                    });
+            });
+
+
+            submitBtn.addEventListener('click', () => {
+                    
+                    const correctAnswers = ['Javascript', 'ClientSide'];
+                    let score = 0;
+                    radioInputs.forEach(input => {
+                        if (input.checked && correctAnswers.includes(input.value)) {
+                        score++;
+                        }
+                        if (input.checked) {
+                        input.disabled = true;
+                        }
+
+
+                        // if(input.checked && qno1 === 'Javascript'){
+                        //     score++;
+                        // }
+                        // if(input.checked && qno2 === 'ClientSide'){
+                        //     score++;
+                        // }
+
+                        // if (input.checked) {
+                        //     input.disabled = true;
+                        // }
+
+                        
+                    });
+                    alert(`You got ${score} out of 2 correct!`);
+                    });
+
+           
+     
+
+
+         
+
+
+            
+
+
+
+    </script>
+</body>
+
+
+</html>

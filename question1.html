@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: blue;
+        width: 50%;
+        justify-content: center;
+        margin-top: 50PX;
+
+    }
+</style>
+
+
+<body>
+
+<center>
+    <div class="container">
+        <label for="" id="h2">WELCOME TO OUR PAGE</label>
+
+        <p id="demo"></p>
+    </div>
+
+    
+        
+</center>
+   
+<script>
+
+
+    let page = document.querySelector("#h2");
+    let container = document.querySelector('div');
+    let  h = document.querySelector('.h1');
+
+  //  console.log(page);
+
+    const element = document.getElementById("demo");
+     
+    setTimeout(()=>{
+        page.textContent= page.textContent.toLowerCase();
+        container.style.backgroundColor="black";
+       
+        element.innerHTML='HELLO DAPRY';
+        element.style.color='green'
+
+
+        page.style.color='green';
+        page.style.fontSize='30px';
+
+        
+    },3000);
+
+</script>
+</body>
+</html>
+

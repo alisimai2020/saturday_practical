@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+     body{
+          margin: 0;
+          padding: 0;
+          background: #f7f2f2;
+          font-family: 'Poppins',sans-serif;
+          box-sizing: border-box;
+     }
+   
+   .sidenav{
+  
+        height: 100%;
+        width: 0%;
+        position: fixed;
+         z-index: 1;
+         top:0;
+         left: 0;
+          background-color: #111;
+         overflow-x: hidden;/*hidden content*/
+         padding-top: 60px; 
+         transition: 0.55s;
+
+        
+
+   }
+   .sidenav a{
+    padding: 8px  8px 8px 32px; 
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+
+
+   }
+
+   .sidenav a :hover{
+        color: #f1f1f1;
+
+
+   }
+
+   hr{
+      color: #818181;
+     
+   }
+
+   .hr{
+      color: #818181;
+     
+    
+   }
+
+
+
+   .sidenav .closebtn{
+
+
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+   }
+
+   #main {
+          transition: margin-left .5s;
+          
+          
+   }
+.header{
+     padding: 20px;
+     background: #111;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+     <div class="sidenav" id="mySIdenav">
+
+
+          <div style="align-items: center;justify-content: center; margin-left: 50px;"> 
+               <img src="download (2).jpeg" alt="" srcset="" style="border-radius: 60%; width: 90px; height: 90px;">
+          </div>
+
+        <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+        <hr>
+        <a href="#">About</a>
+        <hr>
+        <a href="#">Services</a>
+        <hr>
+        <a href="#">Clients</a>
+        <hr>
+        <a href="#">Contact</a>
+          <hr>
+
+     </div>
+
+   
+
+
+     <div id="main" style="display: block; ">
+
+          <nav class="header">
+               <span style="font-size: 50px;cursor: pointer;" onclick="openNav()" id="toggle">&#9776;</span>   
+                hshh
+          </nav>
+
+               <div class="content" style="background: #818181 ; margin:60px 60px 0 60px; height: 900px;display:block; width: 50%;" >
+
+                   
+                    <h1 style="padding-top: 20px; margin-left: 60px; ">cv</h1>
+                    <hr class="hr"  style="margin: 0 60px 0 60px;">
+                    <h2 style="font-weight: 50px;font-size: 30px; padding-left:30px; margin-left: 30px; color: aqua;">Personal information</h2>
+                    <hr class="hr2" style="margin: 0 60px 0 60px;">  
+                    
+                    
+
+                    
+               </div>
+
+               <div class="content" style="background: #818181 ; margin:60px 60px 0 60px; height: 900px;display:block; width: 50%;" >
+
+                   
+                    <h1 style="padding-top: 20px; margin-left: 60px; ">cv</h1>
+                    <hr class="hr"  style="margin: 0 60px 0 60px;">
+                    <h2 style="font-weight: 50px;font-size: 30px; padding-left:30px; margin-left: 30px; color: aqua;">Personal information</h2>
+                    <hr class="hr2" style="margin: 0 60px 0 60px;">  
+                    
+                    
+
+                    
+               </div>
+          </div>
+
+
+
+      <script>
+          
+
+            function openNav() {
+                 document.querySelector('#mySIdenav').style.width ="250px";
+                 document.querySelector('#toggle').style.display ="none";
+                 document.getElementById("main").style.marginLeft = "250px";
+                 
+
+           
+            }
+
+
+            function closeNav(){
+                document.querySelector('#mySIdenav').style.width="0";
+                document.getElementById("main").style.marginLeft = "0";
+              
+                document.querySelector('.header').style.padding= "0";
+                document.querySelector('.header').style.margin= "0";
+               
+            }
+      </script>
+    
+</body>
+</html>
